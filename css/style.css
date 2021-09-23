@@ -104,7 +104,6 @@ p {
     background-color: var(--primary);
 }
 
-
 /* TOGGLE */
 /* TOGGLE */
 /* TOGGLE */
@@ -296,9 +295,6 @@ p {
     .home-img{
         display: none;
     }
-    .home-content{
-        /* left: 40px; */
-    }
     .logo{
         font-size: 1.5rem;
         left:40px;
@@ -322,6 +318,10 @@ p {
     .toggle.active{
         background-size: 13px;
     }
+    .navigation{
+        box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.25);
+        right: 20px;
+    }
     /* SERVICESPAGE */
     .services {
         padding: 0 40px 0 40px;
@@ -344,6 +344,19 @@ p {
 }
 
 @media(max-width: 700px){
+    .navigation{
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #fff;
+        z-index: 15;
+
+        display: flex;
+        justify-content: center;
+    }
+
     .services {
         grid-template-columns: 1fr;
     }
