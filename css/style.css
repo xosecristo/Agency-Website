@@ -18,6 +18,14 @@ html, body {
     color:#111;
 }
 
+a:link, 
+a:visited, 
+a:hover, 
+a:active{
+    color: #111;
+    text-decoration: none;
+}
+
 section {
     display: flex;
     flex-direction: column;
