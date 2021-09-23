@@ -88,7 +88,7 @@ p {
     height: 100%;
 }
 .btn {
-    color:#fff;
+    color:#fff !important;
     font-weight: 500;
     font-size: 1.3rem;
     text-align: center;
