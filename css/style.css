@@ -1,0 +1,357 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
+
+:root {
+    --primary: #0066FF;
+}
+
+/* BASE STYLES */
+/* BASE STYLES */
+/* BASE STYLES */
+* {
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    font-family: 'Poppins', sans-serif;
+    color:#111;
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    padding-top: 150px;
+    /* padding-left: 80px; */
+}
+
+section.home{
+    flex-direction: row;
+    align-items: center;
+    padding-left: 80px;
+    padding-top: 0;
+    margin-top: 0;
+}
+
+h1 {
+    font-size: 2rem;
+    font-weight: 500;
+    line-height: 120%;
+    
+    margin-bottom: 32px;
+}
+p {
+    font-size: 1.3rem;
+    font-weight: 300;
+    line-height: 140%;
+
+    margin-bottom: 32px;
+}
+
+.logo {
+    position: absolute;
+    z-index: 10;
+    left: 80px;
+    top: 60px;
+
+    color: var(--primary);
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.title {
+    padding-left: 80px;
+}
+
+/* HOMEPAGE */
+/* HOMEPAGE */
+/* HOMEPAGE */
+.home-content {
+    position: relative;
+    z-index: 10;
+    max-width: 600px;
+}
+.home-img {
+    position: absolute;
+    right: 0;
+    top: 0;
+    
+    height: 100%;
+}
+.btn {
+    color:#fff;
+    font-weight: 500;
+    font-size: 1.3rem;
+    text-align: center;
+    text-decoration: none;
+    text-transform: capitalize;
+    
+    padding: 10px 50px;
+
+    cursor: pointer;
+
+    border:0;
+    border-radius: 35.5px;
+    background-color: var(--primary);
+}
+
+
+/* TOGGLE */
+/* TOGGLE */
+/* TOGGLE */
+.toggle {
+    z-index: 30;
+    
+    position: fixed;
+    right: 80px;
+    top: 55px;
+
+    width: 60px;
+    height: 60px;
+
+    border-radius: 50%;
+    background: var(--primary) url(../img/menu.png) center no-repeat;
+    background-size: 30px;
+
+    cursor: pointer;
+}
+.toggle.active{
+    background: var(--primary) url(../img/close.png) center no-repeat;
+    background-size: 25px;
+}
+
+/* NAVIGATION */
+/* NAVIGATION */
+/* NAVIGATION */
+.navigation {
+    display: flex;
+    align-items: center;
+
+    visibility: hidden;
+    opacity: 0;
+
+    z-index: 20;
+    width: 360px;
+    height: 225px;
+
+    position: fixed;
+    top:35px;
+    right: 55px;
+    
+    background-color: #fff;
+    border-radius: 15px;
+    transition: 0.2s;
+}
+
+.navigation.active {
+    opacity: 1;
+    transition: 0.2s;
+    visibility: visible;
+}
+
+.navigation li {
+    list-style-type: none;
+    margin-left: 23px ;
+
+    color: #111;
+    font-weight: 300;
+    font-size: 2rem;
+    line-height: 50px;
+}
+
+.navigation li .here {
+    font-weight: 600;
+}
+
+.navigation a{
+    text-decoration: none !important;
+}
+
+/* PROJECTS */
+/* PROJECTS */
+/* PROJECTS */
+.portfolio{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding-bottom: 60px;
+}
+
+.portfolio .project {
+    margin-bottom: -7px;
+}
+
+.portfolio .project img{
+    width: 100%;
+    opacity: 0.7;
+    filter: grayscale(100%);
+    transition: 0.5s;
+}
+.portfolio .project img:hover{
+    opacity: 1.0;
+    cursor: pointer;
+    filter: grayscale(0%);
+}
+
+/* SERVICES */
+/* SERVICES */
+/* SERVICES */
+.services {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 45px;
+    text-align: center;
+    padding-left: 80px;
+}
+
+.services .service {
+    width: 400px;
+    height: 300px;
+    padding: 30px;
+    border-radius: 15px;
+    /* box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.25); */
+    cursor: pointer;
+}
+.services .service:hover{
+    box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.25);
+}
+.services .service:hover h2 {
+    color: var(--primary);
+    font-weight: bold;
+}
+
+.services .services .icon img {
+    max-width: 106px;
+}
+
+/* CONTACT FORM */
+/* CONTACT FORM */
+/* CONTACT FORM */
+.contact{
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+.contact-form{
+    padding-left: 80px;
+    position: relative;
+}
+.contact-form .row {
+    width: 100%;
+    display: flex;
+}
+
+.contact-form .input50{
+    width: 50%;
+    margin: 0 25px 25px 0;
+}
+.contact-form .input100{
+    width: 100%;
+    margin: 0 25px 25px 0;
+}
+
+.contact-form .row input,
+.contact-form .row textarea {
+    opacity: 0.7;
+    font-family: Poppins;
+    font-size: 1.2rem;
+    text-align: center;
+    padding: 5px;
+    width: 100%;
+    outline: none;
+}
+
+.contact-form .row textarea {
+    /* text-align: left !important; */
+    padding: 5px;
+    height: 250px;
+    resize: none;
+}
+
+.contact-form .row input[type='submit'] {
+    width: 50%;
+    margin-left: 50%;
+}
+
+.info-box{
+    padding-right: 7vw;
+    padding-left: 7vw;
+}
+.info-box h2{
+    color: var(--primary);
+}
+.info-box a{
+    text-decoration: none;
+}
+
+/* MEDIA */
+/* MEDIA */
+/* MEDIA */
+@media(max-width : 1068px){
+    /* HOMEPAGE */
+    .home-img{
+        display: none;
+    }
+    .home-content{
+        left: 40px;
+    }
+    .logo{
+        font-size: 1.5rem;
+        left:40px;
+    }
+    section{
+        padding: 100px 0px 100px 0px;
+    }
+    .title{
+        padding-left: 40px;
+        padding-top: 20px;
+    }
+    /* TOGGLE */
+    .toggle{
+        width: 50px;
+        height: 50px;
+        background-size: 15px;
+    }
+    .toggle.active{
+        background-size: 13px;
+    }
+    /* SERVICESPAGE */
+    .services {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .contact {
+        flex-direction: column;
+    }
+    .contact-form{
+        width: 100%;
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+    .info-box {
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+}
+
+@media(max-width: 768px){
+    .services {
+        grid-template-columns: 1fr;
+    }
+    
+    .portfolio {
+        grid-template-columns: 1fr;
+    }
+    .contact-info{
+        width: 100%;
+    }
+    .contact-form .row{
+        flex-direction: column;
+    }
+    .contact-form .input50,
+    .contact-form .input100 {
+        width: 100%;
+    }
+}
